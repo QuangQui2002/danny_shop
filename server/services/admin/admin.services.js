@@ -27,13 +27,13 @@ class AdminService {
         }
     }
 
-    async addAdmin(account_id, name, transaction) {
+    async addAdmin(account_id, name, type_admin) {
         try {
             const addAdmin = await Admin.create({
                 account_id: account_id,
                 name: name,
-                type_admin : 'Quản Lý'
-            }, { transaction: transaction });
+                type_admin : type_admin
+            });
             return addAdmin;
         } catch (error) {
             throw error;

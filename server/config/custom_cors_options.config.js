@@ -20,6 +20,7 @@ const customCorsOptions = (req, res, next) => {
       return ServerResponse.createErrorResponse(res, SystemConst.STATUS_CODE.INTERNAL_SERVER,
         EnumMessage.NOT_ALLOW_BY_CORS);
   }
+  
 };
 
 module.exports = customCorsOptions;
